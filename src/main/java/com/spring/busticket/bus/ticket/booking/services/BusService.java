@@ -10,8 +10,10 @@ public interface BusService {
     String addBus(List<Bus> busList);
 
 
-    Optional<Bus> getBusList();
+    List<Bus> getBus();
 
     String deleteBus(int busId);
+
+//    String updatePhoneNo(Bus busNum);
 
 }

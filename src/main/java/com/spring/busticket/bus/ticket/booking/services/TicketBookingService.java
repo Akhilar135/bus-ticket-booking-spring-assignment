@@ -5,9 +5,9 @@ import com.spring.busticket.bus.ticket.booking.sqlschema.TicketBooking;
 import java.util.List;
 
 public interface TicketBookingService {
-    String seatBooking(List<TicketBooking> bookingList);
+    String addTicket(List<TicketBooking> ticket);
 
-    List <TicketBooking> getBookingList();
+    List <TicketBooking> getTicket();
 
-    String deleteBooking (int bookingId);
+    String deleteTicket (int bookingId);
 }

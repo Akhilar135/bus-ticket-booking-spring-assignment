@@ -3,14 +3,15 @@ package com.spring.busticket.bus.ticket.booking.services;
 import com.spring.busticket.bus.ticket.booking.dao.BusDao;
 import com.spring.busticket.bus.ticket.booking.sqlschema.Bus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class BusServiceImpl implements BusService {
     @Autowired
     private BusDao busDao;
     @Override
-    public String busAvailable(List<Bus> busList) {
+    public String addBus(List<Bus> busList) {
         busDao.saveAll(busList);
         return "Successfully added the bus";
     }
@@ -20,7 +21,7 @@ public class BusServiceImpl implements BusService {
     }
 
     @Override
-    public List<Bus> getbusList() {
+    public List<Bus> getBus() {
       return (List<Bus>)busDao.findAll();
     }
 
@@ -35,5 +36,11 @@ public class BusServiceImpl implements BusService {
         busDao.deleteById(busId);
         return "Bus deleted";
     }
+
+//    @Override
+//    public String updatePhoneNo(Bus busNum) {
+//        busDao.save(busNum);
+//            return "Phone number updated";
+//    }
 
 }

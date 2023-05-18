@@ -22,5 +22,6 @@ public class Bus {
     @GeneratedValue
     private int busId;
     private String busName;
+    private String phoneNo;
 
 }

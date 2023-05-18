@@ -15,13 +15,16 @@ import javax.persistence.*;
 @Setter
 public class TicketBooking {
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     private int bookingId;
     private int seatNo;
     private int bookingPrice;
 
     @OneToOne(fetch = FetchType.EAGER)
     private User user;
+
+    @OneToOne(fetch = FetchType.EAGER)
+    private Bus bus;
 
 
 
